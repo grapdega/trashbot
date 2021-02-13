@@ -10,6 +10,7 @@ radius = 0.587246
 height = 2.00214
 
 [node name="Trash" type="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="t-pose" parent="." instance=ExtResource( 2 )]

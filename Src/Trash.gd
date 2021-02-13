@@ -12,10 +12,20 @@ var left=false
 var rigth=false
 var walk=false
 var idle=false
-var v = Vector2(0,-1)
+var v = Vector2.ZERO
 var v2 = v
 func _ready():
 	var rt = rotation.y
+	print(rt,' ',PI/2)
+	if int(rt*100) == 0:
+		v=Vector2(0,-1)	
+	if int(rt*100) == int(PI*50):
+		v=Vector2(-1,0)
+	if int(rt*100) == -1*int(PI*100):
+		v=Vector2(0,1)
+	if int(rt*100) == -1*int(PI*50):
+		v=Vector2(1,0)
+	v2=v
 	cmd='s'+cmd
 func _process(delta):
 	d=delta
