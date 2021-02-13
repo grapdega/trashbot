@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Model/enviroment.escn" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.363767, 1.41303, 1 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.41143, 0.001, 2.41507 )
+
+[node name="enviroment" instance=ExtResource( 1 )]
+
+[node name="StaticBody2" type="StaticBody" parent="boru" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0546155, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="boru/StaticBody2" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04025, -0.603803 )
+shape = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="floor" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16415e-07, -0.158001, -1.49012e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floor/StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16415e-07, 0.158001, 1.49012e-08 )
+shape = SubResource( 1 )
