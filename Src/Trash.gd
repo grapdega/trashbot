@@ -12,6 +12,7 @@ var left=false
 var rigth=false
 var walk=false
 var idle=false
+var interrupt=false
 var v = Vector2.ZERO
 var v2 = v
 func _ready():
@@ -71,11 +72,15 @@ func turn_left(i,j):
 		return Vector2(i,j)
 	if der <  PI/2:
 		der+=d
-		rotate_y(d)
+		#rotate_y(d)
+		if not interrupt:
+			interrupt=true
+			$trash/AnimationPlayer.play("Left Turn-loop")
 		v2=Vector2(i,j)
 		return Vector2(0,0)
 	else:
-		
+		interrupt=false
+		rotate_y(PI/2)
 		var k = 0
 		var l = 0
 		der=0
@@ -98,24 +103,29 @@ func turn_right(i,j):
 		return Vector2(i,j)
 	if der <  PI/2:
 		der+=d
-		rotate_y(-1*d)
+		#rotate_y(-1*d)
+		if not interrupt:
+			interrupt=true
+			$trash/AnimationPlayer.play("Right Turn-loop")
 		v2=Vector2(i,j)
 		return Vector2(0,0)
-	var k = 0
-	var l = 0
-	der=0
-	curpos+=1
-	rigth=false
-	if i==0 and j == 1:
-		return Vector2(-1,0)
-	if i==0 and j == -1:
-		return Vector2(1,0)
-	if i==1 and j == 0:
-		return Vector2(0,1)
-	if i==-1 and j == 0:
-		return Vector2(0,-1)
-	if i==0 and j == 0:
-			return v2
+	else:
+		rotate_y(-1*PI/2)
+		var k = 0
+		var l = 0
+		der=0
+		curpos+=1
+		rigth=false
+		if i==0 and j == 1:
+			return Vector2(-1,0)
+		if i==0 and j == -1:
+			return Vector2(1,0)
+		if i==1 and j == 0:
+			return Vector2(0,1)
+		if i==-1 and j == 0:
+			return Vector2(0,-1)
+		if i==0 and j == 0:
+				return v2
 
 
 func be_idle(v):
@@ -128,12 +138,12 @@ func be_idle(v):
 	if v.x != 0 or v.y != 0:
 		v2=v
 		v=Vector2(0,0)
-	$"t-pose/trash/AnimationPlayer".play("Idle")
+	$"trash/AnimationPlayer".play("Idle-loop")
 	return v
 
 func be_walk(v):
 	if not walk:
 		return v
-	$"t-pose/trash/AnimationPlayer".play("animWalking")
+	$"trash/AnimationPlayer".play("Walk-loop")
 	return v
 	

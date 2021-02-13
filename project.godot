@@ -19,6 +19,10 @@ config/name="test"
 run/main_scene="res://Lvl/lvl-1.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "zylann.scatter" )
+
 [rendering]
 
 quality/driver/driver_name="GLES2"

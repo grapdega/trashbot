@@ -1,0 +1,143 @@
+[gd_scene load_steps=11 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.903545, 0.470456, 0.15756, 1 )
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id=2]
+resource_name = "Cube010"
+surfaces/0 = {
+"aabb": AABB( -0.428283, -1, -0.0823342, 0.856566, 2.00001, 0.2 ),
+"array_data": PoolByteArray( 199, 71, 219, 190, 0, 0, 128, 63, 213, 158, 168, 189, 0, 0, 129, 0, 127, 0, 0, 129, 0, 57, 102, 52, 233, 71, 219, 62, 0, 0, 128, 63, 213, 158, 168, 189, 0, 0, 129, 0, 127, 0, 0, 129, 0, 54, 102, 52, 199, 71, 219, 62, 0, 0, 128, 191, 213, 158, 168, 189, 0, 0, 129, 0, 127, 0, 0, 129, 0, 48, 102, 52, 233, 71, 219, 190, 0, 0, 128, 191, 213, 158, 168, 189, 0, 0, 129, 0, 127, 0, 0, 129, 0, 59, 102, 52, 233, 71, 219, 62, 0, 0, 128, 63, 213, 158, 168, 189, 0, 127, 0, 0, 129, 0, 0, 127, 0, 54, 102, 52, 199, 71, 219, 190, 0, 0, 128, 63, 213, 158, 168, 189, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 102, 52, 199, 71, 219, 190, 0, 0, 128, 63, 223, 250, 240, 61, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 52, 233, 71, 219, 62, 0, 0, 128, 63, 223, 250, 240, 61, 0, 127, 0, 0, 129, 0, 0, 127, 0, 54, 0, 52, 233, 71, 219, 62, 0, 0, 128, 63, 223, 250, 240, 61, 0, 0, 127, 0, 129, 0, 0, 127, 0, 54, 0, 52, 199, 71, 219, 190, 0, 0, 128, 63, 223, 250, 240, 61, 0, 0, 127, 0, 129, 0, 0, 127, 0, 57, 0, 52, 233, 71, 219, 190, 0, 0, 128, 191, 223, 250, 240, 61, 0, 0, 127, 0, 129, 0, 0, 127, 0, 57, 0, 0, 199, 71, 219, 62, 0, 0, 128, 191, 223, 250, 240, 61, 0, 0, 127, 0, 129, 0, 0, 127, 0, 54, 0, 0, 199, 71, 219, 62, 0, 0, 128, 191, 213, 158, 168, 189, 127, 0, 0, 0, 0, 127, 0, 127, 0, 48, 102, 52, 233, 71, 219, 62, 0, 0, 128, 63, 213, 158, 168, 189, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 102, 52, 233, 71, 219, 62, 0, 0, 128, 63, 223, 250, 240, 61, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 52, 199, 71, 219, 62, 0, 0, 128, 191, 223, 250, 240, 61, 127, 0, 0, 0, 0, 127, 0, 127, 0, 48, 0, 52, 199, 71, 219, 190, 0, 0, 128, 63, 213, 158, 168, 189, 129, 0, 0, 0, 0, 129, 0, 127, 0, 57, 102, 52, 233, 71, 219, 190, 0, 0, 128, 191, 213, 158, 168, 189, 129, 0, 0, 0, 0, 129, 0, 127, 0, 59, 102, 52, 233, 71, 219, 190, 0, 0, 128, 191, 223, 250, 240, 61, 129, 0, 0, 0, 0, 129, 0, 127, 0, 59, 0, 52, 199, 71, 219, 190, 0, 0, 128, 63, 223, 250, 240, 61, 129, 0, 0, 0, 0, 129, 0, 127, 0, 57, 0, 52, 199, 71, 219, 62, 0, 0, 128, 191, 223, 250, 240, 61, 0, 129, 0, 0, 129, 0, 0, 127, 0, 54, 0, 60, 233, 71, 219, 190, 0, 0, 128, 191, 223, 250, 240, 61, 0, 129, 0, 0, 129, 0, 0, 127, 0, 57, 0, 60, 233, 71, 219, 190, 0, 0, 128, 191, 213, 158, 168, 189, 0, 129, 0, 0, 129, 0, 0, 127, 0, 57, 204, 59, 199, 71, 219, 62, 0, 0, 128, 191, 213, 158, 168, 189, 0, 129, 0, 0, 129, 0, 0, 127, 0, 54, 204, 59 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 8, 0, 10, 0, 9, 0, 8, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0, 20, 0, 22, 0, 21, 0, 20, 0, 23, 0, 22, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 36,
+"material": SubResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.428037, 1, 0.0751818 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.747858, 0.747858, 0.747858, 1 )
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id=5]
+resource_name = "Cube011"
+surfaces/0 = {
+"aabb": AABB( -0.171313, -0.9, -1.88233, 0.342636, 1.8, 1.80001 ),
+"array_data": PoolByteArray( 173, 108, 47, 62, 102, 102, 102, 191, 213, 158, 168, 189, 0, 129, 0, 0, 129, 0, 0, 127, 0, 54, 204, 59, 173, 108, 47, 190, 102, 102, 102, 191, 213, 158, 168, 189, 0, 129, 0, 0, 129, 0, 0, 127, 0, 57, 204, 59, 173, 108, 47, 190, 102, 102, 102, 191, 48, 240, 240, 191, 0, 129, 0, 0, 129, 0, 0, 127, 0, 57, 0, 58, 173, 108, 47, 62, 102, 102, 102, 191, 48, 240, 240, 191, 0, 129, 0, 0, 129, 0, 0, 127, 0, 54, 0, 58, 173, 108, 47, 62, 102, 102, 102, 191, 48, 240, 240, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 54, 0, 58, 173, 108, 47, 190, 102, 102, 102, 191, 48, 240, 240, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 57, 0, 58, 173, 108, 47, 190, 102, 102, 102, 63, 48, 240, 240, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 57, 0, 56, 173, 108, 47, 62, 102, 102, 102, 63, 48, 240, 240, 191, 0, 0, 129, 0, 129, 0, 0, 127, 0, 54, 0, 56, 173, 108, 47, 190, 102, 102, 102, 63, 48, 240, 240, 191, 129, 0, 0, 0, 0, 129, 0, 127, 0, 57, 0, 56, 173, 108, 47, 190, 102, 102, 102, 191, 48, 240, 240, 191, 129, 0, 0, 0, 0, 129, 0, 127, 0, 59, 0, 56, 173, 108, 47, 190, 102, 102, 102, 191, 213, 158, 168, 189, 129, 0, 0, 0, 0, 129, 0, 127, 0, 59, 102, 52, 173, 108, 47, 190, 102, 102, 102, 63, 213, 158, 168, 189, 129, 0, 0, 0, 0, 129, 0, 127, 0, 57, 102, 52, 173, 108, 47, 62, 102, 102, 102, 191, 48, 240, 240, 191, 127, 0, 0, 0, 0, 127, 0, 127, 0, 48, 0, 56, 173, 108, 47, 62, 102, 102, 102, 63, 48, 240, 240, 191, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 0, 56, 173, 108, 47, 62, 102, 102, 102, 63, 213, 158, 168, 189, 127, 0, 0, 0, 0, 127, 0, 127, 0, 54, 102, 52, 173, 108, 47, 62, 102, 102, 102, 191, 213, 158, 168, 189, 127, 0, 0, 0, 0, 127, 0, 127, 0, 48, 102, 52, 173, 108, 47, 62, 102, 102, 102, 63, 48, 240, 240, 191, 0, 127, 0, 0, 129, 0, 0, 127, 0, 54, 0, 56, 173, 108, 47, 190, 102, 102, 102, 63, 48, 240, 240, 191, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 0, 56, 173, 108, 47, 190, 102, 102, 102, 63, 213, 158, 168, 189, 0, 127, 0, 0, 129, 0, 0, 127, 0, 57, 102, 52, 173, 108, 47, 62, 102, 102, 102, 63, 213, 158, 168, 189, 0, 127, 0, 0, 129, 0, 0, 127, 0, 54, 102, 52 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 8, 0, 10, 0, 9, 0, 8, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 30,
+"material": SubResource( 4 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 20
+}
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.172562, 0.871402, 0.872248 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "Close"
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, 1.78158, 0, 0, 0, 1, 0.4, 1, 1 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "Open"
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, 1.70431, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "Close"
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, 1.70431, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1 )
+
+[sub_resource type="Animation" id=10]
+resource_name = "Open"
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, 1.78158, 0, 0, 0, 1, 0.4, 1, 1 )
+
+[node name="Doors" type="Spatial"]
+
+[node name="Door" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, -0.175915, -5.81937 )
+
+[node name="Wall005" type="MeshInstance" parent="Door"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.11767 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Door/Wall005"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door/Wall005/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="Wall006" type="MeshInstance" parent="Door"]
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.1371 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Door/Wall006"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door/Wall006/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00551391, 0.0142297, -0.987834 )
+shape = SubResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door/Wall006"]
+anims/Close = SubResource( 7 )
+anims/Open = SubResource( 8 )
+
+[node name="Door2" type="Spatial" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4, -0.175915, -9.81937 )
+
+[node name="Wall005" type="MeshInstance" parent="Door2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.11767 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Door2/Wall005"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door2/Wall005/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="Wall006" type="MeshInstance" parent="Door2"]
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, 1.70431 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Door2/Wall006"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door2/Wall006/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00551391, 0.0142297, -0.987834 )
+shape = SubResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door2/Wall006"]
+anims/Close = SubResource( 9 )
+anims/Open = SubResource( 10 )
