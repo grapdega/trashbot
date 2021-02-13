@@ -1,27 +1,126 @@
 extends KinematicBody
 
 
-var i=0
+var der=0
 export var speed = 1.6
+export var delay = 3
+export var cmd = ""
+var curpos=0
 var time = 4
+var d = 1.0
+var left=false
+var rigth=false
+var walk=false
+var idle=false
+var v = Vector2(0,-1)
+var v2 = v
+func _ready():
+	var rt = rotation.y
+	cmd='s'+cmd
 func _process(delta):
-	var posx=0
-	var posy=1
-	time-=delta
-	print(time)
-	if i <  PI/2:
-		i+=delta
-		rotate_y(delta)
-	else:
-		posx=1
-		posy=0
-	if time < 0:
-		posx=0
-		posy=0
-		$"t-pose/trash/AnimationPlayer".play("Idle")
-	else:
-		$"t-pose/trash/AnimationPlayer".play("animWalking")
-
-	var vel = Vector3(1*speed*posx,0,1*speed*posy)
+	d=delta
+	time+=d
+	cmd_process()
+	v=be_idle(v)
+	v=be_walk(v)
+	v=turn_right(v.x,v.y)
+	v=turn_left(v.x,v.y)
+	
+	var vel = vec2vel(v)
 	move_and_slide(vel)
+
+func cmd_process():
+	walk=false
+	idle=false
+	if curpos == len(cmd):
+		curpos=0
+	
+	if cmd[curpos] == "w":
+		walk=true
+	elif cmd[curpos] == "a":
+		left = true
+	elif cmd[curpos] == "s":
+		idle=true
+	elif cmd[curpos] == "d":
+		rigth = true
+	if time > delay:
+		time=0
+		print(v.x,' ',v.y)
+		curpos+=1
+	
+
+func vec2vel(v):
+	if v:
+		return Vector3(1*speed*v.x,0,1*speed*v.y)
+	else:
+		return Vector3(0,0,0)
+
+func turn_left(i,j):
+	if not left:
+		return Vector2(i,j)
+	if der <  PI/2:
+		der+=d
+		rotate_y(d)
+		return Vector2(i,j)
+	else:
+		
+		var k = 0
+		var l = 0
+		der=0
+		curpos+=1
+		left=false
+		if i==0 && j == 1:
+			return Vector2(1,0)
+		if i==0 && j == -1:
+				return Vector2(-1,0)
+		if i==1 && j == 0:
+			return Vector2(0,-1)
+		if i==-1 && j == 0:
+			return Vector2(0,1)
+		if i==0 and j == 0:
+			return v2
+		
+			
+func turn_right(i,j):
+	if not rigth: 
+		return Vector2(i,j)
+	if der <  PI/2:
+		der+=d
+		rotate_y(-1*d)
+		return Vector2(i,j)
+	var k = 0
+	var l = 0
+	der=0
+	curpos+=1
+	rigth=false
+	if i==0 and j == 1:
+		return Vector2(-1,0)
+	if i==0 and j == -1:
+		return Vector2(1,0)
+	if i==1 and j == 0:
+		return Vector2(0,1)
+	if i==-1 and j == 0:
+		return Vector2(0,-1)
+	if i==0 and j == 0:
+			return v2
+
+
+func be_idle(v):
+	if v2.x != 0 or v2.y != 0:
+		v=v2
+		v2=Vector2(0,0)
+		
+	if not idle:
+		return v
+	if v.x != 0 or v.y != 0:
+		v2=v
+		v=Vector2(0,0)
+	$"t-pose/trash/AnimationPlayer".play("Idle")
+	return v
+
+func be_walk(v):
+	if not walk:
+		return v
+	$"t-pose/trash/AnimationPlayer".play("animWalking")
+	return v
 	
