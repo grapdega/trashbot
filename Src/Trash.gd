@@ -6,7 +6,7 @@ export var speed = 1.6
 export var delay = 3
 export var cmd = ""
 var curpos=0
-var time = 4
+var time = 0
 var d = 1.0
 var left=false
 var rigth=false
@@ -55,13 +55,15 @@ func vec2vel(v):
 	else:
 		return Vector3(0,0,0)
 
+
 func turn_left(i,j):
 	if not left:
 		return Vector2(i,j)
 	if der <  PI/2:
 		der+=d
 		rotate_y(d)
-		return Vector2(i,j)
+		v2=Vector2(i,j)
+		return Vector2(0,0)
 	else:
 		
 		var k = 0
@@ -87,7 +89,8 @@ func turn_right(i,j):
 	if der <  PI/2:
 		der+=d
 		rotate_y(-1*d)
-		return Vector2(i,j)
+		v2=Vector2(i,j)
+		return Vector2(0,0)
 	var k = 0
 	var l = 0
 	der=0
