@@ -3,7 +3,7 @@ extends KinematicBody
 
 var der=0
 export var speed = 1.6
-export var delay = 3
+export var delay = 3.2
 export var cmd = ""
 var curpos=0
 var time = 0
@@ -14,6 +14,7 @@ var walk=false
 var idle=false
 var interrupt=false
 var v = Vector2.ZERO
+export var play = false
 var v2 = v
 func _ready():
 	var rt = rotation.y
@@ -27,26 +28,26 @@ func _ready():
 	if int(rt*100) == -1*int(PI*50):
 		v=Vector2(1,0)
 	v2=v
-	cmd='s'+cmd
+	#cmd='s'+cmd
 func _process(delta):
-	d=delta
-	time+=d
-	cmd_process()
-	v=be_idle(v)
-	v=be_walk(v)
-	v=turn_right(v.x,v.y)
-	v=turn_left(v.x,v.y)
-	
-	var vel = vec2vel(v)
-	move_and_slide(vel)
+	if play:
+		d=delta
+		time+=d
+		cmd_process()
+		v=be_idle(v)
+		v=be_walk(v)
+		v=turn_right(v.x,v.y)
+		v=turn_left(v.x,v.y)
+		
+		var vel = vec2vel(v)
+		move_and_slide(vel)
 
 func cmd_process():
 	walk=false
 	idle=false
-	if curpos == len(cmd):
-		curpos=0
-	
-	if cmd[curpos] == "w":
+	if curpos >= len(cmd):
+		idle=true
+	elif cmd[curpos] == "w":
 		walk=true
 	elif cmd[curpos] == "a":
 		left = true
@@ -76,6 +77,7 @@ func turn_left(i,j):
 		if not interrupt:
 			interrupt=true
 			$trash/AnimationPlayer.play("Left Turn-loop")
+			time=0
 		v2=Vector2(i,j)
 		return Vector2(0,0)
 	else:
@@ -107,6 +109,7 @@ func turn_right(i,j):
 		if not interrupt:
 			interrupt=true
 			$trash/AnimationPlayer.play("Right Turn-loop")
+			time=0
 		v2=Vector2(i,j)
 		return Vector2(0,0)
 	else:
