@@ -6,9 +6,12 @@ var curlvl=1
 onready var globals = preload("res://Globals.gd")
 onready var trash = get_parent().get_parent().get_parent().get_node("Trash")
 func _ready():
+	
+	
 	pass # Replace with function body.
 
 func _process(delta):
+	
 	if len(cmd) > trash.curpos:
 		get_parent().get_node("cur").text=cmd[trash.curpos]
 	if trash.lvldone:

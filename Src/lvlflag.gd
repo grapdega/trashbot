@@ -8,6 +8,9 @@ extends Area
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"../CSGMesh/AnimationPlayer".play("rotation")
+
+	
 	pass # Replace with function body.
 
 
@@ -19,4 +22,4 @@ func _ready():
 func _on_Area_body_entered(body):
 	if body.is_in_group("trash"):
 		body.lvldone=true
-	get_parent().queue_free()
+		get_parent().queue_free()

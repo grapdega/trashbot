@@ -153,3 +153,7 @@ func be_walk(v):
 	$"trash/AnimationPlayer".play("Walk-loop")
 	return v
 	
+func dead():
+	if play:
+		$"trash/AnimationPlayer".play("Dead-loop")
+		play=false

@@ -1,4 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Doors.gd" type="Script" id=1]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.903545, 0.470456, 0.15756, 1 )
@@ -44,35 +46,29 @@ surfaces/0 = {
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 0.172562, 0.871402, 0.872248 )
 
-[sub_resource type="Animation" id=7]
-resource_name = "Close"
-tracks/0/type = "transform"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, 1.78158, 0, 0, 0, 1, 0.4, 1, 1 )
-
-[sub_resource type="Animation" id=8]
-resource_name = "Open"
-tracks/0/type = "transform"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, 1.70431, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1 )
-
 [sub_resource type="Animation" id=9]
 resource_name = "Close"
+length = 2.0
+loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, 1.70431, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1 )
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, 1.70431, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1, 2, 1, 0, 0.975915, 1.70431, 0, 0, 0, 1, 0.4, 1, 1 )
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Door/Wall006:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.975915, 1.78158 ), Vector3( 0, 0.975915, -0.0824528 ), Vector3( 0, 0.975915, 1.78158 ) ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "Open"
@@ -85,9 +81,10 @@ tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 0, 0.975915, -0.1371, 0, 0, 0, 1, 0.4, 1, 1, 1, 1, 0, 0.975915, 1.78158, 0, 0, 0, 1, 0.4, 1, 1 )
 
 [node name="Doors" type="Spatial"]
+script = ExtResource( 1 )
 
 [node name="Door" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, -0.175915, -5.81937 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.175915, 3.18063 )
 
 [node name="Wall005" type="MeshInstance" parent="Door"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.11767 )
@@ -100,22 +97,19 @@ material/0 = null
 shape = SubResource( 3 )
 
 [node name="Wall006" type="MeshInstance" parent="Door"]
-transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.1371 )
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, 1.78158 )
 mesh = SubResource( 5 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="Door/Wall006"]
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.1371 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door/Wall006/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00551391, 0.0142297, -0.987834 )
 shape = SubResource( 6 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door/Wall006"]
-anims/Close = SubResource( 7 )
-anims/Open = SubResource( 8 )
-
 [node name="Door2" type="Spatial" parent="."]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4, -0.175915, -9.81937 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.4, -0.175915, -0.81937 )
 
 [node name="Wall005" type="MeshInstance" parent="Door2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975915, -0.11767 )

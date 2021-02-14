@@ -5,22 +5,15 @@
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.587246
-height = 2.00214
+height = 1.40802
 
 [node name="Trash" type="KinematicBody"]
 transform = Transform( 1.752, 0, 0, 0, 1.752, 0, 0, 0, 1.752, 0, 0, 0 )
 script = ExtResource( 4 )
 speed = 3.0
 
-[node name="SpotLight" type="SpotLight" parent="."]
-transform = Transform( 0.570776, -0.000490876, 0.000278851, 0.000278499, -0.000409489, -0.570776, 0.000491076, 0.570776, -0.00040925, -0.0245919, 0.275097, -0.381982 )
-light_color = Color( 0, 1, 0.0627451, 1 )
-light_energy = 5.0
-spot_range = 4.97541
-spot_angle = 29.7523
-
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.22806, -0.0483987 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.35667, -0.0483987 )
 shape = SubResource( 1 )
 
 [node name="trash" parent="." instance=ExtResource( 1 )]
