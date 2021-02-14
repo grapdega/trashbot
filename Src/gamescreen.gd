@@ -3,6 +3,7 @@ extends Button
 var isrun = false
 var cmd=''
 var curlvl=1
+onready var globals = preload("res://Globals.gd")
 onready var trash = get_parent().get_parent().get_parent().get_node("Trash")
 func _ready():
 	pass # Replace with function body.
@@ -56,12 +57,13 @@ func _on_idle_pressed():
 
 
 func _on_clear_pressed():
-	if cmd=='':
+	if trash.play:
 		next_level()
 	cmd=''
 	ui_update()
 
 
 func next_level():
-	curlvl+=1
-	get_parent().get_parent().get_parent().get_tree().change_scene("res://Lvl/lvl-"+str(curlvl)+".tscn")
+	var a = get_parent().get_parent().get_parent()
+	print(a.get_node("next").text)
+	a.get_tree().change_scene("res://Lvl/lvl-"+a.get_node("next").text+".tscn")
