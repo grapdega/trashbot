@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Font/Gumela.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Font/Font_Style.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/UI/play.stylebox" type="StyleBox" id=3]
+[ext_resource path="res://Src/lvl-0.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -15,6 +16,7 @@ colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
 gradient = SubResource( 2 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 567.167
@@ -46,3 +48,4 @@ text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

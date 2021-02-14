@@ -175,6 +175,7 @@ custom_styles/focus = SubResource( 2 )
 custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 text = "..."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -205,6 +206,10 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
 [connection signal="pressed" from="Panel/play" to="Panel/play" method="_on_play"]
 [connection signal="pressed" from="Panel/left" to="Panel/play" method="_on_left_pressed"]
 [connection signal="pressed" from="Panel/go" to="Panel/play" method="_on_go_pressed"]
