@@ -19,26 +19,30 @@ outline_size = 1
 outline_color = Color( 0.0313726, 0.0235294, 0.0235294, 1 )
 font_data = ExtResource( 9 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="Panel" type="Panel" parent="."]
-margin_top = 650.0
-margin_right = 1280.0
-margin_bottom = 725.0
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.440002
+margin_right = 0.00012207
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="play" type="Button" parent="Panel"]
-anchor_left = 0.016
-anchor_top = 0.208
-anchor_right = 0.071
-anchor_bottom = 0.792
-margin_left = -0.368
-margin_top = 0.0240002
-margin_right = 0.366997
-margin_bottom = -0.0240021
+anchor_left = 0.015
+anchor_top = 0.032
+anchor_right = 0.086
+anchor_bottom = 0.932
+margin_left = -0.307131
+margin_top = -0.0147927
+margin_right = -0.627136
+margin_bottom = -0.0147934
 rect_pivot_offset = Vector2( 79.6935, 0 )
 custom_styles/hover = ExtResource( 6 )
 custom_styles/pressed = ExtResource( 7 )
@@ -54,13 +58,13 @@ __meta__ = {
 
 [node name="left" type="Button" parent="Panel"]
 anchor_left = 0.016
-anchor_top = -1.528
-anchor_right = 0.07
-anchor_bottom = -0.944
-margin_left = -0.368
-margin_top = 0.0160065
-margin_right = 0.389999
-margin_bottom = -0.0319977
+anchor_top = -2.737
+anchor_right = 0.095
+anchor_bottom = -1.837
+margin_left = -2.22713
+margin_top = 54.1403
+margin_right = -1.90715
+margin_bottom = 54.1403
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = ExtResource( 8 )
@@ -74,12 +78,13 @@ __meta__ = {
 
 [node name="go" type="Button" parent="Panel"]
 anchor_left = 0.016
-anchor_top = -0.708
+anchor_top = -1.767
 anchor_right = 0.072
-anchor_bottom = -0.125
-margin_left = -0.368
-margin_top = -0.0239983
-margin_right = 0.343994
+anchor_bottom = -0.867
+margin_left = -2.22713
+margin_top = 65.5586
+margin_right = -1.51515
+margin_bottom = 65.5586
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = ExtResource( 8 )
@@ -93,13 +98,13 @@ __meta__ = {
 
 [node name="right" type="Button" parent="Panel"]
 anchor_left = 0.016
-anchor_top = -2.361
-anchor_right = 0.07
-anchor_bottom = -1.778
-margin_left = -0.368
-margin_top = -0.00799561
-margin_right = 0.389999
-margin_bottom = 0.0160065
+anchor_top = -3.974
+anchor_right = 0.116
+anchor_bottom = -3.074
+margin_left = -2.22713
+margin_top = 65.5381
+margin_right = -1.22714
+margin_bottom = 65.5381
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = ExtResource( 8 )
@@ -114,13 +119,13 @@ __meta__ = {
 
 [node name="idle" type="Button" parent="Panel"]
 anchor_left = 0.016
-anchor_top = -3.153
-anchor_right = 0.07
-anchor_bottom = -2.569
-margin_left = -0.368
-margin_top = 0.0160065
-margin_right = 0.389999
-margin_bottom = -0.0319977
+anchor_top = -5.093
+anchor_right = 0.105
+anchor_bottom = -4.193
+margin_left = -2.22713
+margin_top = 65.5042
+margin_right = -1.10715
+margin_bottom = 65.5041
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = ExtResource( 8 )
@@ -133,14 +138,14 @@ __meta__ = {
 }
 
 [node name="clear" type="Button" parent="Panel"]
-anchor_left = 0.933
-anchor_top = 0.208
-anchor_right = 0.984
-anchor_bottom = 0.792
-margin_left = 0.202942
-margin_top = 0.0240002
-margin_right = 0.0279541
-margin_bottom = -0.0240021
+anchor_left = 0.867
+anchor_top = 0.004
+anchor_right = 0.968
+anchor_bottom = 0.762
+margin_left = 26.203
+margin_top = 5.024
+margin_right = 42.283
+margin_bottom = 19.224
 custom_styles/hover = ExtResource( 6 )
 custom_styles/pressed = ExtResource( 7 )
 custom_styles/focus = ExtResource( 8 )
@@ -153,14 +158,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Panel"]
-anchor_left = 0.476
-anchor_top = 0.14
-anchor_right = 0.92
-anchor_bottom = 0.861
-margin_left = -473.835
-margin_top = -22.1422
-margin_right = -526.315
-margin_bottom = -38.2171
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 188.0
+margin_top = -112.5
+margin_right = 988.0
+margin_bottom = -56.4749
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 2 )
 align = 1
@@ -170,36 +173,50 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="Panel"]
-anchor_left = 0.087
-anchor_right = 0.917
-anchor_bottom = 1.0
-margin_left = -0.00100708
-margin_top = -1.0
-margin_right = -0.0910645
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -796.755
+margin_top = -50.5
+margin_right = 796.755
+margin_bottom = 50.5
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="cur" type="Label" parent="Panel"]
-anchor_left = 0.023
-anchor_top = -9.39
-anchor_right = 0.055
-anchor_bottom = -8.81
-margin_left = 17.4085
-margin_top = 99.6513
-margin_right = 15.9685
-margin_bottom = 99.6514
+anchor_left = 0.132
+anchor_top = 0.213
+anchor_right = 0.845
+anchor_bottom = 0.79
+margin_left = 1459.11
+margin_top = -850.79
+margin_right = 150.148
+margin_bottom = -844.49
 align = 1
 valign = 1
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="circle" type="Sprite" parent="Panel"]
-position = Vector2( 67.0359, -581.2 )
-z_index = -1
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+anchor_left = 0.935
+anchor_top = -8.319
+anchor_right = 0.985
+anchor_bottom = -7.465
+margin_left = -104.357
+margin_top = -11.9944
+margin_right = -104.357
+margin_bottom = -2.39441
 texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Panel/play" to="Panel/play" method="_on_play"]
 [connection signal="pressed" from="Panel/left" to="Panel/play" method="_on_left_pressed"]
 [connection signal="pressed" from="Panel/go" to="Panel/play" method="_on_go_pressed"]

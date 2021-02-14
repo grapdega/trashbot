@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Font/Gumela.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 25
+size = 50
 outline_size = 2
 outline_color = Color( 0.776471, 0.239216, 0.239216, 1 )
 font_data = ExtResource( 1 )
