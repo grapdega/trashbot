@@ -15,8 +15,10 @@ var idle=false
 var interrupt=false
 var v = Vector2.ZERO
 export var play = false
+var lvldone=false
 var v2 = v
 func _ready():
+	add_to_group("trash",false)
 	var rt = rotation.y
 	print(rt,' ',PI/2)
 	if int(rt*100) == 0:

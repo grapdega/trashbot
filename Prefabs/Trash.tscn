@@ -8,8 +8,9 @@ radius = 0.587246
 height = 2.00214
 
 [node name="Trash" type="KinematicBody"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+transform = Transform( 1.752, 0, 0, 0, 1.752, 0, 0, 0, 1.752, 0, 0, 0 )
 script = ExtResource( 4 )
+speed = 3.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.22806, -0.0483987 )
