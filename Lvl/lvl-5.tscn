@@ -1,0 +1,459 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Meshlib/Floor.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://Meshlib/Wall.meshlib" type="MeshLibrary" id=2]
+[ext_resource path="res://Meshlib/Trap.meshlib" type="MeshLibrary" id=3]
+[ext_resource path="res://Prefabs/trap_floor.scn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/lvlflag.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Trash.tscn" type="PackedScene" id=6]
+[ext_resource path="res://element/gamescreen.tscn" type="PackedScene" id=7]
+
+[node name="lvl-5" type="Spatial"]
+
+[node name="Trash" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1.752, 0, 0, 0, 1.752, 0, 0, 0, 1.752, 20.2205, 0, 9.79383 )
+delay = 3.02
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+
+[node name="lvlflag" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.93788, 0.533463, -8.02011 )
+
+[node name="Traps" type="Spatial" parent="."]
+
+[node name="trap" parent="Traps" instance=ExtResource( 4 )]
+
+[node name="trap2" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+
+[node name="trap3" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="trap4" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
+
+[node name="trap5" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+
+[node name="trap6" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+
+[node name="trap7" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4 )
+
+[node name="trap8" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2 )
+
+[node name="trap9" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+
+[node name="trap10" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2 )
+
+[node name="trap11" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="trap12" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2 )
+
+[node name="trap13" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4 )
+
+[node name="trap14" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2 )
+
+[node name="trap15" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4 )
+
+[node name="trap16" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2 )
+
+[node name="trap17" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+
+[node name="trap18" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
+
+[node name="trap20" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -10 )
+
+[node name="trap21" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+
+[node name="trap22" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="trap24" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6 )
+
+[node name="trap26" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10 )
+
+[node name="trap27" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8 )
+
+[node name="trap28" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -10 )
+
+[node name="trap32" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6 )
+
+[node name="trap33" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8 )
+
+[node name="trap34" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
+
+[node name="trap35" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8 )
+
+[node name="trap36" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6 )
+
+[node name="trap37" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12 )
+
+[node name="trap38" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+
+[node name="trap39" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12 )
+
+[node name="trap40" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 10 )
+
+[node name="trap41" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8 )
+
+[node name="trap42" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6 )
+
+[node name="trap43" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8 )
+
+[node name="trap44" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6 )
+
+[node name="trap45" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12 )
+
+[node name="trap46" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 10 )
+
+[node name="trap47" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12 )
+
+[node name="trap48" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10 )
+
+[node name="trap49" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
+
+[node name="trap50" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2 )
+
+[node name="trap51" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
+
+[node name="trap52" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2 )
+
+[node name="trap53" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4 )
+
+[node name="trap54" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2 )
+
+[node name="trap55" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4 )
+
+[node name="trap56" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2 )
+
+[node name="trap57" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0 )
+
+[node name="trap58" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2 )
+
+[node name="trap59" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0 )
+
+[node name="trap60" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -2 )
+
+[node name="trap61" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4 )
+
+[node name="trap62" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2 )
+
+[node name="trap63" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 4 )
+
+[node name="trap64" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 2 )
+
+[node name="trap65" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8 )
+
+[node name="trap66" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -10 )
+
+[node name="trap67" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -8 )
+
+[node name="trap68" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10 )
+
+[node name="trap70" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -6 )
+
+[node name="trap72" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -6 )
+
+[node name="trap73" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8 )
+
+[node name="trap74" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -10 )
+
+[node name="trap75" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -8 )
+
+[node name="trap76" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -10 )
+
+[node name="trap78" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6 )
+
+[node name="trap80" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -6 )
+
+[node name="trap81" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8 )
+
+[node name="trap82" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6 )
+
+[node name="trap83" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8 )
+
+[node name="trap84" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6 )
+
+[node name="trap85" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12 )
+
+[node name="trap86" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10 )
+
+[node name="trap87" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 12 )
+
+[node name="trap88" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10 )
+
+[node name="trap89" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8 )
+
+[node name="trap90" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6 )
+
+[node name="trap91" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 8 )
+
+[node name="trap92" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 6 )
+
+[node name="trap93" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12 )
+
+[node name="trap94" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10 )
+
+[node name="trap95" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 12 )
+
+[node name="trap96" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 10 )
+
+[node name="trap99" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0 )
+
+[node name="trap100" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -2 )
+
+[node name="trap103" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 4 )
+
+[node name="trap104" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 2 )
+
+[node name="trap105" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
+
+[node name="trap106" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -2 )
+
+[node name="trap107" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 0 )
+
+[node name="trap108" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -2 )
+
+[node name="trap109" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 4 )
+
+[node name="trap110" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 2 )
+
+[node name="trap111" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 4 )
+
+[node name="trap112" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 2 )
+
+[node name="trap113" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -8 )
+
+[node name="trap114" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -10 )
+
+[node name="trap115" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -8 )
+
+[node name="trap116" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -10 )
+
+[node name="trap118" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -6 )
+
+[node name="trap119" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -4 )
+
+[node name="trap120" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -6 )
+
+[node name="trap121" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -8 )
+
+[node name="trap122" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10 )
+
+[node name="trap123" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -8 )
+
+[node name="trap124" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -10 )
+
+[node name="trap125" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -4 )
+
+[node name="trap126" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -6 )
+
+[node name="trap127" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -4 )
+
+[node name="trap128" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -6 )
+
+[node name="trap131" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 8 )
+
+[node name="trap132" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6 )
+
+[node name="trap133" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 12 )
+
+[node name="trap135" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 12 )
+
+[node name="trap137" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 8 )
+
+[node name="trap138" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 6 )
+
+[node name="trap139" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 8 )
+
+[node name="trap140" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 6 )
+
+[node name="trap141" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 12 )
+
+[node name="trap143" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 12 )
+
+[node name="trap144" parent="Traps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 10 )
+
+[node name="Tilemaps" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.556134 )
+
+[node name="floor" type="GridMap" parent="Tilemaps"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.015, -0.989, 0.506 )
+mesh_library = ExtResource( 1 )
+data = {
+"cells": PoolIntArray( 8, 0, -1610612735, 8, 1, -1610612735, 8, 2, -1610612735, 8, 3, 1, 8, 4, 1, 9, 4, 1, 10, 4, 1, 1, 65531, -1610612735, 2, 65531, 536870913, 1, 65532, -1610612735, 1, 65533, 1, 2, 65533, -1073741823, 3, 65533, -1610612735, 4, 65533, -1610612735, 5, 65533, 1, 6, 65533, 1, 7, 65533, 1, 8, 65533, 1, 8, 65534, 1, 8, 65535, -536870911 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="wall" type="GridMap" parent="Tilemaps"]
+mesh_library = ExtResource( 2 )
+data = {
+"cells": PoolIntArray( 11, 0, 917504, 65535, 0, 262144, 131071, 0, 537133056, 196607, 0, 262144, 11, 1, 917504, 65535, 1, 262144, 131071, 1, 262144, 196607, 1, 537133056, 5, 2, 1310720, 11, 2, -1072824320, 65535, 2, 262144, 65541, 2, 538181632, 131071, 2, 262144, 131077, 2, -1072431104, 196607, 2, 262144, 5, 3, 1310720, 11, 3, 917504, 65535, 3, 262144, 65541, 3, -1072431104, 131071, 3, -1610350592, 131077, 3, 1310720, 196607, 3, -1073479680, 11, 4, -1609695232, 65535, 4, -1610350592, 131071, 4, -1073479680, 196607, 4, -1610350592, 11, 5, -1072824320, 65535, 5, 262144, 131071, 5, 262144, 196607, 5, 262144, 11, 6, 537788416, 65536, 6, 1179648, 131071, 6, -1609433088, 131072, 6, 1179648, 196607, 6, 1179648, 65535, 65530, -1610350592, 131071, 65530, 262144, 196607, 65530, 262144, 11, 65531, -1072824320, 65535, 65531, -1073479680, 131071, 65531, -1610350592, 196607, 65531, 262144, 11, 65532, -1072824320, 65535, 65532, 262144, 131071, 65532, 262144, 196607, 65532, -1073479680, 11, 65533, 917504, 65535, 65533, -1610350592, 131071, 65533, 262144, 196607, 65533, 262144, 11, 65534, 917504, 65535, 65534, 537133056, 131071, 65534, 262144, 196607, 65534, 262144, 11, 65535, 917504, 65535, 65535, 262144, 65536, 65535, 1179648, 131071, 65535, 262144, 131072, 65535, 1179648, 196607, 65535, 262144 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 1, 0 )
+}
+
+[node name="wall2" type="GridMap" parent="Tilemaps"]
+mesh_library = ExtResource( 2 )
+data = {
+"cells": PoolIntArray( 65535, 0, -1073479680, 131071, 0, 262144, 131072, 0, 851968, 196607, 0, 851968, 65535, 1, 262144, 131071, 1, -1610350592, 131072, 1, -1072889856, 196607, 1, 851968, 65535, 2, -1610350592, 131071, 2, 537133056, 131072, 2, 851968, 196607, 2, 851968, 65535, 3, 262144, 131071, 3, 1074003968, 131072, 3, 851968, 131077, 3, 1611464704, 196607, 3, -1609760768, 65535, 4, 537133056, 131071, 4, 1610874880, 131072, 4, 851968, 196607, 4, 851968, 65535, 5, -1610350592, 131071, 5, -1610350592, 131072, 5, 851968, 196607, 5, 851968, 0, 6, 1245184, 1, 6, -1072496640, 2, 6, 1245184, 3, 6, 1245184, 4, 6, 1245184, 5, 6, 1245184, 6, 6, 1245184, 7, 6, 1245184, 8, 6, -1609367552, 9, 6, -1609367552, 10, 6, 538116096, 65535, 6, 1245184, 131072, 6, -1609760768, 196607, 6, -1072889856, 0, 65530, -1609367552, 1, 65530, -1609367552, 2, 65530, -1072496640, 3, 65530, 538116096, 4, 65530, 1245184, 5, 65530, 1245184, 6, 65530, -1609367552, 7, 65530, 1245184, 8, 65530, 1245184, 9, 65530, 1245184, 10, 65530, 1245184, 65535, 65530, -1609367552, 65536, 65530, 538116096, 65537, 65530, 538116096, 65538, 65530, -1609367552, 65539, 65530, 538116096, 65540, 65530, 1245184, 65541, 65530, 1245184, 65542, 65530, -1072496640, 65543, 65530, 1245184, 65544, 65530, -1072496640, 65545, 65530, 1245184, 65546, 65530, 1245184, 131071, 65530, 538116096, 131072, 65530, 1507328, 131073, 65530, -1072234496, 131074, 65530, 1507328, 131075, 65530, -1609105408, 131076, 65530, 1507328, 131077, 65530, 1507328, 131078, 65530, 1507328, 131079, 65530, 1507328, 131080, 65530, -535363584, 131081, 65530, -1072234496, 131082, 65530, 1507328, 131083, 65530, 1507328, 65535, 65531, -1610350592, 131071, 65531, -1073479680, 65535, 65532, 262144, 131071, 65532, 262144, 65535, 65533, 262144, 131071, 65533, -536608768, 65535, 65534, 262144, 131071, 65534, 262144, 65535, 65535, 262144, 131071, 65535, 262144 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 2, 0 )
+}
+
+[node name="trap" type="GridMap" parent="Tilemaps"]
+mesh_library = ExtResource( 3 )
+data = {
+"cells": PoolIntArray( 65536, 0, 589825, 65536, 1, 589825, 3, 2, 655361, 65536, 2, -1073151999, 65541, 2, 851968, 3, 3, 655361, 65536, 3, -1073151999, 65541, 3, 327680, 65536, 4, 537460737, 65536, 5, 537460737 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 4, 0 )
+}
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.650138, -0.537719, 0.536823, 0, 0.706517, 0.707697, -0.759816, -0.460101, 0.459333, 22.5515, 12.6578, 9.66869 )
+projection = 1
+size = 31.0
+
+[node name="cmd" type="Label" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "uwvwwuwwvwvw"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next" type="Label" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}

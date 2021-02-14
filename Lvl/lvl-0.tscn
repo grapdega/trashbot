@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Font/Gumela.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Font/Font_Style.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/UI/play.stylebox" type="StyleBox" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 1 )
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 567.167
+margin_top = 338.739
+margin_right = 1280.17
+margin_bottom = 699.739
+custom_fonts/font = SubResource( 1 )
+text = "You Wıin"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 950.787, 507.843 )
+scale = Vector2( 1.3, 1714.48 )
+z_index = -1
+texture = SubResource( 3 )
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 800.223
+margin_top = 607.551
+margin_right = 1061.22
+margin_bottom = 667.551
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}

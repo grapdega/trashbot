@@ -12,8 +12,7 @@ func _ready():
 
 func _process(delta):
 	
-	if len(cmd) > trash.curpos:
-		get_parent().get_node("cur").text=cmd[trash.curpos]
+
 	if trash.lvldone:
 		text='Next'
 		ui_update()
@@ -70,7 +69,6 @@ func _on_clear_pressed():
 	if trash.play:
 		next_level()
 	cmd=''
-	get_parent().get_node("cur").text=''
 	ui_update()
 
 
@@ -84,3 +82,8 @@ func _on_hack():
 	if len(cmd) != 0 and get_parent().get_parent().get_parent().get_node("cmd"):
 			cmd=get_parent().get_parent().get_parent().get_node("cmd").text
 			ui_update()
+
+
+func _on_menu_pressed():
+	var a = get_parent().get_parent().get_parent()
+	a.get_tree().change_scene("res://element/Menu-3D.scn")

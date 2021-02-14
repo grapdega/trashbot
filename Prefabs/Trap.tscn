@@ -8,7 +8,7 @@ roughness = 0.5
 albedo_color = Color( 0.903545, 0, 0.0694443, 1 )
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id=15]
+[sub_resource type="ArrayMesh" id=3]
 resource_name = "Pipe"
 surfaces/0 = {
 "aabb": AABB( -3.6, -0.225, -0.409197, 4.3992, 3.8475, 0.818394 ),
@@ -38,11 +38,11 @@ surfaces/1 = {
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 2.11819, 1.87794, 0.399159 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0.470268, 0.470268, 0.470268, 1 )
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id=16]
+[sub_resource type="ArrayMesh" id=6]
 resource_name = "pipe_02"
 surfaces/0 = {
 "aabb": AABB( -3.6, -0.225, -0.409197, 4.3992, 3.8475, 0.818394 ),
@@ -51,20 +51,20 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 384,
-"material": SubResource( 7 ),
+"material": SubResource( 5 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 117
 }
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 2.1201, 1.63294, 0.375451 )
 
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 0.903545, 0, 0.0694443, 1 )
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id=17]
+[sub_resource type="ArrayMesh" id=9]
 resource_name = "BezierCurve002"
 surfaces/0 = {
 "aabb": AABB( -2.95557, 0.225046, -0.801082, 2.79207, 2.55217, 1.69732 ),
@@ -73,20 +73,20 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 768,
-"material": SubResource( 12 ),
+"material": SubResource( 8 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 200
 }
 
-[sub_resource type="BoxShape" id=14]
+[sub_resource type="BoxShape" id=10]
 extents = Vector3( 1.26572, 1.18947, 0.798545 )
 
 [node name="Trap" type="Spatial"]
 
 [node name="Pipe" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449051, 0.184175, 0 )
-mesh = SubResource( 15 )
+mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
 
@@ -98,22 +98,22 @@ shape = SubResource( 4 )
 
 [node name="Pipe_02" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449051, 0.184175, -0.636219 )
-mesh = SubResource( 16 )
+mesh = SubResource( 6 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="Pipe_02"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Pipe_02/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46028, 1.94461, 0 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="Cable" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0414357, -0.121847, 2 )
-mesh = SubResource( 17 )
+mesh = SubResource( 9 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="Cable"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cable/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47279, 1.53925, 0.0673888 )
-shape = SubResource( 14 )
+shape = SubResource( 10 )
