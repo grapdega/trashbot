@@ -51,11 +51,11 @@ func cmd_process():
 		idle=true
 	elif cmd[curpos] == "w":
 		walk=true
-	elif cmd[curpos] == "a":
+	elif cmd[curpos] == "u":
 		left = true
-	elif cmd[curpos] == "s":
+	elif cmd[curpos] == "o":
 		idle=true
-	elif cmd[curpos] == "d":
+	elif cmd[curpos] == "v":
 		rigth = true
 	if time > delay:
 		time=0

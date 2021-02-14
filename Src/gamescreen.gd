@@ -41,17 +41,17 @@ func ui_update():
 
 
 func _on_left_pressed():
-	cmd+='a'
+	cmd+='u'
 	ui_update()
 
 
 func _on_right_pressed():
-	cmd+='d'
+	cmd+='v'
 	ui_update()
 
 
 func _on_idle_pressed():
-	cmd+='s'
+	cmd+='o'
 	ui_update()
 
 
