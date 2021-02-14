@@ -5,9 +5,10 @@
 [sub_resource type="SphereShape" id=1]
 radius = 0.757795
 
-[node name="Spatial" type="Spatial"]
+[node name="lvlflag" type="Spatial"]
 
 [node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00503445, 2.38419e-07, 0.00880861 )
 width = 0.968702
 height = 0.828879
 depth = 1.0892

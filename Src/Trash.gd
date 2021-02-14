@@ -115,6 +115,7 @@ func turn_right(i,j):
 		v2=Vector2(i,j)
 		return Vector2(0,0)
 	else:
+		interrupt=false
 		rotate_y(-1*PI/2)
 		var k = 0
 		var l = 0
