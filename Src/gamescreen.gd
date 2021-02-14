@@ -19,13 +19,20 @@ func _process(delta):
 
 func _on_play():
 	if not isrun:
-		if len(cmd) == 0 and get_parent().get_parent().get_parent().get_node("cmd"):
-			cmd=get_parent().get_parent().get_parent().get_node("cmd").text
 		trash.cmd=cmd
 		trash.play=true
 		text='Stop'
+		get_parent().get_node("go").hide()
+		get_parent().get_node("left").hide()
+		get_parent().get_node("right").hide()
+		get_parent().get_node("idle").hide()
 		ui_update()
 	else:
+		get_parent().get_node("go").show()
+		get_parent().get_node("left").show()
+		get_parent().get_node("right").show()
+		get_parent().get_node("idle").show()
+		
 		get_parent().get_parent().get_parent().get_tree().reload_current_scene()
 		text='Start'
 	if trash.lvldone:
@@ -60,6 +67,7 @@ func _on_clear_pressed():
 	if trash.play:
 		next_level()
 	cmd=''
+	get_parent().get_node("cur").text=''
 	ui_update()
 
 
@@ -67,3 +75,9 @@ func next_level():
 	var a = get_parent().get_parent().get_parent()
 	print(a.get_node("next").text)
 	a.get_tree().change_scene("res://Lvl/lvl-"+a.get_node("next").text+".tscn")
+
+
+func _on_hack():
+	if len(cmd) != 0 and get_parent().get_parent().get_parent().get_node("cmd"):
+			cmd=get_parent().get_parent().get_parent().get_node("cmd").text
+			ui_update()

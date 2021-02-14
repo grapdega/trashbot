@@ -19,6 +19,10 @@ config/name="test"
 run/main_scene="res://Lvl/lvl-1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Background="*res://element/background.tscn"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "zylann.scatter" )
